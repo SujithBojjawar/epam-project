@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Budget Insights</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="insight.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-chevron-left"></i> Back to Dashboard
+            </a>
+            <h1>Smart Budget Insights</h1>
+        </nav>
+
+        <div class="insights-grid">
+            <div class="insight-card spending-patterns">
+                <h2><i class="fas fa-brain"></i> AI Spending Analysis</h2>
+                <div class="pattern-metrics">
+                    <div class="metric">
+                        <span class="label">Spending Trend</span>
+                        <span class="value" id="spending-trend">Loading...</span>
+                    </div>
+                    <div class="metric">
+                        <span class="label">Budget Utilization</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="budget-progress"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-insights" id="ai-insights">
+                </div>
+            </div>
+            <div class="insight-card goals">
+                <h2><i class="fas fa-bullseye"></i> Financial Goals</h2>
+                <div class="goals-container">
+                    <div class="add-goal">
+                        <input type="text" id="goal-name" placeholder="Goal name">
+                        <input type="number" id="goal-amount" placeholder="Target amount">
+                        <input type="date" id="goal-date">
+                        <button onclick="addGoal()" class="btn-add-goal">Add Goal</button>
+                    </div>
+                    <div class="goals-list" id="goals-list">
+                    </div>
+                </div>
+            </div>
+            <div class="insight-card recommendations">
+                <h2><i class="fas fa-lightbulb"></i> Smart Recommendations</h2>
+                <div class="recommendations-list" id="recommendations-list">
+                </div>
+            </div>>
+            <div class="insight-card timeline">
+                <h2><i class="fas fa-clock"></i> Savings Timeline</h2>
+                <div class="timeline-container">
+                    <div class="timeline-header">
+                        <span>Past</span>
+                        <span>Present</span>
+                        <span>Projected</span>
+                    </div>
+                    <div class="timeline-chart" id="timeline-chart">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-optimization">
+            <h2>Category Optimization</h2>
+            <div class="optimization-grid" id="optimization-grid">
+            </div>
+        </div>
+        <div class="comparison-section">
+            <h2>How You Compare</h2>
+            <div class="comparison-chart-container">
+                <canvas id="comparison-chart"></canvas>
+            </div>
+            <div class="comparison-insights" id="comparison-insights">
+            </div>
+        </div>
+    </div>
+
+    <div class="fab-container">
+        <button class="fab" onclick="generateReport()">
+            <i class="fas fa-file-export"></i>
+            <span class="fab-label">Generate Report</span>
+        </button>
+    </div>
+    <script src="insight.js"></script>
+    <script src="
+    
+    "></script>
+</body>
+</html>

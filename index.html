@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Budget Tracker</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Smart Budget Tracker</h1>
+            <p>Take control of your finances</p>
+        </div>
+
+        <div class="dashboard">
+            <div class="card">
+                <h2>Monthly Budget</h2>
+                <div class="amount">₹<span id="budget-amount">0</span></div>
+                <div class="form-group">
+                    <label>Set Budget Limit</label>
+                    <input type="number" id="budget-input" placeholder="Enter amount">
+                    <button class="btn btn-primary" onclick="setBudget()">Set Budget</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Monthly Expenses</h2>
+                <div class="amount">₹<span id="expenses-amount">0</span></div>
+            </div>
+
+            <div class="card">
+                <h2>Yearly Projection</h2>
+                <div class="amount">₹<span id="yearly-amount">0</span></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Add Expense</h2>
+            <div class="form-group">
+                <label>Expense Description</label>
+                <input type="text" id="expense-description" placeholder="Enter description">
+            </div>
+            <div class="form-group">
+                <label>Amount</label>
+                <input type="number" id="expense-amount" placeholder="Enter amount">
+            </div>
+            <div class="form-group">
+                <label>Category</label>
+                <select id="expense-category">
+                    <option value="groceries">Groceries</option>
+                    <option value="utilities">Utilities</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" onclick="addExpense()">Add Expense</button>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="expenses-chart"></canvas>
+        </div>
+
+        <div class="expenses-list">
+            <h2>Recent Expenses</h2>
+            <div id="expenses-list"></div>
+        </div>
+
+        <div class="savings-tips">
+            <h3>Smart Savings Tips</h3>
+            <ul class="tips-list" id="savings-tips"></ul>
+        </div>
+    </div>
+
+    <div class="alert" id="alert"></div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</body>
+</html>
